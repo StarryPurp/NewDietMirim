@@ -64,7 +64,7 @@ public class main_page extends Activity {
             @Override
             public void onClick(View v) {
                 Intent i=new Intent(getApplicationContext(), sign_in.class);
-                startActivity(i);;
+                startActivity(i);
             }
         });
 
@@ -95,7 +95,7 @@ public class main_page extends Activity {
                 return false;
             }
         });
-        databaseReference = FirebaseDatabase.getInstance().getReference("users");
+        databaseReference  = FirebaseDatabase.getInstance().getReference("users");
 
         log =(Button)findViewById(R.id.log);
         log.setOnClickListener(new View.OnClickListener() {

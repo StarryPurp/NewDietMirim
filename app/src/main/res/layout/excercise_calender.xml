@@ -8,5 +8,12 @@
         android:layout_height="wrap_content">
     </CalendarView>
 
+    <TextView
+        android:id="@+id/texts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:hint="섭취한 칼로리/기초대사량"/>
+
 
 </LinearLayout>

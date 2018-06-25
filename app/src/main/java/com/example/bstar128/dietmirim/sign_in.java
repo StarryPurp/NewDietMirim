@@ -78,6 +78,15 @@ public class sign_in extends Activity{
                 startActivity(intent);
             }
         });
+
+        Button cancel=(Button)findViewById(R.id.cancel);
+        cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),main_page.class);
+                startActivity(intent);
+            }
+        });
     }
 
     /*public class myDBHelper extends SQLiteOpenHelper{

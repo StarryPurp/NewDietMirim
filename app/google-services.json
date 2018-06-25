@@ -1,0 +1,102 @@
+{
+  "project_info": {
+    "project_number": "89681559617",
+    "firebase_url": "https://dietmirim-7396f.firebaseio.com",
+    "project_id": "dietmirim-7396f",
+    "storage_bucket": "dietmirim-7396f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:89681559617:android:1ed9387e20e3da37",
+        "android_client_info": {
+          "package_name": "bstar128.example.hansung.dietmirim"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "89681559617-8p24f7llnf96eqnrv4sa1099tf49d3be.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "bstar128.example.hansung.dietmirim",
+            "certificate_hash": "aa85b1e085d932eb73bec66aec8f0dc8b1464629"
+          }
+        },
+        {
+          "client_id": "89681559617-jirkovoas6tvvtjgh4gm42ei3nhl389d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "bstar128.example.hansung.dietmirim",
+            "certificate_hash": "c89517ca6f82c6240d2e1c1db32786e0cdb1a24d"
+          }
+        },
+        {
+          "client_id": "89681559617-v8ovslgcmuot8c48pt921j8crehvta7e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "bstar128.example.hansung.dietmirim",
+            "certificate_hash": "bb383f1e28fdacb92d6be862e6833a4e118f52b8"
+          }
+        },
+        {
+          "client_id": "89681559617-32feas57aftkgrs1dc4iqbru5pkpv7dh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqIZxRqfK7YloTEf4YFvWtuqC4Ya1zL-w"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "89681559617-32feas57aftkgrs1dc4iqbru5pkpv7dh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:89681559617:android:00d09556e89b2288",
+        "android_client_info": {
+          "package_name": "com.example.bstar128.dietmirim"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "89681559617-32feas57aftkgrs1dc4iqbru5pkpv7dh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqIZxRqfK7YloTEf4YFvWtuqC4Ya1zL-w"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
