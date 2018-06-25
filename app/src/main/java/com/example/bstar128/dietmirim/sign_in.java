@@ -111,6 +111,7 @@ public class sign_in extends Activity{
     {
         Date date = new Date(System.currentTimeMillis());
         databaseReference.child(editId.getText().toString()).child("가입일").setValue(date.toString());
+        databaseReference.child(editId.getText().toString()).child("id").setValue(editId.getText().toString());
         databaseReference.child(editId.getText().toString()).child("name").setValue(name.getText().toString());
         databaseReference.child(editId.getText().toString()).child("passwd").setValue(passwd.getText().toString());
         databaseReference.child(editId.getText().toString()).child("height").setValue(tall.getText().toString());

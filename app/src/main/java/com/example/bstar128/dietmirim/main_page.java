@@ -3,6 +3,7 @@ package com.example.bstar128.dietmirim;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
@@ -28,6 +29,7 @@ import java.util.Iterator;
  */
 
 public class main_page extends Activity {
+    String TAG = ">>디버깅";
     TabHost t1;
     ImageView kcal;
     EditText identity,password;
@@ -104,12 +106,26 @@ public class main_page extends Activity {
                 databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
+                        Log.e(TAG, "로그인 시도 : " + identity.getText().toString() + "/" + password.getText().toString());
+                        DataSnapshot c ;
+                        DataSnapshot cd;
                         Iterator<DataSnapshot> child = dataSnapshot.getChildren().iterator();
                         while(child.hasNext()) {
-                            if (child.next().getKey().equals(identity.getText().toString())) {
-                                if(child.next().getValue().equals(password.getText().toString())) {
-                                    Toast.makeText(getApplicationContext(), "로그인!", Toast.LENGTH_LONG).show();
-                                    return;
+                            c =child.next();
+                            if (c.getKey().equals(identity.getText().toString())) {
+                                Iterator<DataSnapshot> c_datas = c.getChildren().iterator();
+                                while (c_datas.hasNext()){
+                                    cd = c_datas.next();
+                                    if(cd.getKey().equals("passwd")){
+                                        String pw = (String) cd.getValue();
+                                        if(pw.equals((password.getText().toString()))){
+                                            Toast.makeText(getApplicationContext(), "로그인!", Toast.LENGTH_LONG).show();
+                                            // 로그인 처리
+                                            Intent i=new Intent(getApplicationContext(),main_page.class);
+                                            startActivity(i);
+                                            return;
+                                        }
+                                    }
                                 }
                             }
                         }
