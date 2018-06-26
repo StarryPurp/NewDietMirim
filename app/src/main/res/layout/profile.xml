@@ -24,11 +24,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="몸무게"/>
-    <TextView
-        android:id="@+id/email_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="이메일"/>
     <Button
         android:id="@+id/edit_info"
         android:layout_width="wrap_content"

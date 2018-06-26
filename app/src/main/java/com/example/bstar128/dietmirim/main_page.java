@@ -1,11 +1,15 @@
 package com.example.bstar128.dietmirim;
 
 import android.app.Activity;
+import android.app.ActivityGroup;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -28,8 +32,8 @@ import java.util.Iterator;
  * Created by HANSUNG on 2017-10-19.
  */
 
-public class main_page extends Activity {
-    String TAG = ">>디버깅";
+public class main_page extends ActivityGroup {
+    //String TAG = ">>디버깅";
     TabHost t1;
     ImageView kcal;
     EditText identity,password;
@@ -56,9 +60,9 @@ public class main_page extends Activity {
         ts2.setIndicator("CALENDER");
         t1.addTab(ts2);
 
-        TabHost.TabSpec ts3=t1.newTabSpec("Tab Spec 3");
+        final TabHost.TabSpec ts3=t1.newTabSpec("Tab Spec 3");
         ts3.setContent(R.id.SIGN);
-        ts3.setIndicator("PROFILE");
+        ts3.setIndicator("LOGIN");
         t1.addTab(ts3);
 
         Button b = findViewById(R.id.sign);
@@ -82,21 +86,6 @@ public class main_page extends Activity {
         password=(EditText)findViewById(R.id.password);
         sign=(Button)findViewById(R.id.sign);
         log=(Button)findViewById(R.id.log);
-        sign.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i=new Intent(getApplicationContext(), sign_in.class);
-                startActivity(i);
-            }
-        });
-        sign.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                Intent i=new Intent(getApplicationContext(),sign_in.class);
-                startActivity(i);
-                return false;
-            }
-        });
         databaseReference  = FirebaseDatabase.getInstance().getReference("users");
 
         log =(Button)findViewById(R.id.log);
@@ -106,7 +95,7 @@ public class main_page extends Activity {
                 databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
-                        Log.e(TAG, "로그인 시도 : " + identity.getText().toString() + "/" + password.getText().toString());
+                       // Log.e(TAG, "로그인 시도 : " + identity.getText().toString() + "/" + password.getText().toString());
                         DataSnapshot c ;
                         DataSnapshot cd;
                         Iterator<DataSnapshot> child = dataSnapshot.getChildren().iterator();
@@ -121,8 +110,10 @@ public class main_page extends Activity {
                                         if(pw.equals((password.getText().toString()))){
                                             Toast.makeText(getApplicationContext(), "로그인!", Toast.LENGTH_LONG).show();
                                             // 로그인 처리
-                                            Intent i=new Intent(getApplicationContext(),main_page.class);
-                                            startActivity(i);
+                                            //setContentView(R.layout.profile);
+                                            Intent i=new Intent(main_page.this,profile.class);
+                                            Window w=getLocalActivityManager().startActivity("PROFILE",i);
+                                            setContentView(w.getDecorView());
                                             return;
                                         }
                                     }
