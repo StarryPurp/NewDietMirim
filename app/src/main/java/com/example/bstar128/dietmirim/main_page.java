@@ -119,7 +119,6 @@ public class main_page extends ActivityGroup {
                                             t1.addTab(ts4);
 
 
-
                                             return;
                                         }
                                     }

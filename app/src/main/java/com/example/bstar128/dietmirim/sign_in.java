@@ -88,25 +88,6 @@ public class sign_in extends Activity{
             }
         });
     }
-
-    /*public class myDBHelper extends SQLiteOpenHelper{
-        public myDBHelper(Context c){
-            super(c,"DietDE",null,1);
-
-        }
-
-        @Override
-        public void onCreate(SQLiteDatabase sqLiteDatabase) {
-            sqLiteDatabase.execSQL("CREATE TABLE DietMirim (Mname CHAR(20) PRIMARY KEY, height INTEGER, weight INTEGER)");
-        }
-
-        @Override
-        public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
-            sqLiteDatabase.execSQL("DROP TABLE IF EXISTS DietMirim");
-            onCreate(sqLiteDatabase);
-        }
-    }*/
-
     void makeNewId()
     {
         Date date = new Date(System.currentTimeMillis());

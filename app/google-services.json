@@ -39,6 +39,14 @@
           }
         },
         {
+          "client_id": "89681559617-sjsllqit5ttbtt4g3cqihj8v2b7622t5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "bstar128.example.hansung.dietmirim",
+            "certificate_hash": "3bbf6eb0748561eb5691dd3a31fe76d819c1fb9e"
+          }
+        },
+        {
           "client_id": "89681559617-32feas57aftkgrs1dc4iqbru5pkpv7dh.apps.googleusercontent.com",
           "client_type": 3
         }
