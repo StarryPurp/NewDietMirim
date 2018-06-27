@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -65,6 +66,7 @@ public class main_page extends ActivityGroup {
         ts3.setIndicator("LOGIN");
         t1.addTab(ts3);
 
+
         Button b = findViewById(R.id.sign);
         b.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -110,10 +112,14 @@ public class main_page extends ActivityGroup {
                                         if(pw.equals((password.getText().toString()))){
                                             Toast.makeText(getApplicationContext(), "로그인!", Toast.LENGTH_LONG).show();
                                             // 로그인 처리
-                                            //setContentView(R.layout.profile);
-                                            Intent i=new Intent(main_page.this,profile.class);
-                                            Window w=getLocalActivityManager().startActivity("PROFILE",i);
-                                            setContentView(w.getDecorView());
+
+                                            final TabHost.TabSpec ts4=t1.newTabSpec("Tab Spec 4");
+                                            ts4.setContent(R.id.prof);
+                                            ts4.setIndicator("PROFILE");
+                                            t1.addTab(ts4);
+
+
+
                                             return;
                                         }
                                     }

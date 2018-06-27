@@ -23,6 +23,7 @@ public class kcal_calculate extends Activity{
     Button test;
     EditText kcal_text;
     Intent i;
+    int kcal;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         //칼로리 계산
@@ -33,7 +34,6 @@ public class kcal_calculate extends Activity{
         test=(Button)findViewById(R.id.test);
         kcal_text=(EditText)findViewById(R.id.kcal);
 
-        int kcal=Integer.parseInt(kcal_text.getText().toString());
 
        test.setOnClickListener(new View.OnClickListener() {
            @Override
@@ -42,6 +42,8 @@ public class kcal_calculate extends Activity{
                startActivity(i);
            }
        });
+
+       /* kcal=Integer.parseInt(kcal_text.getText().toString());
 
         Toast tm=Toast.makeText(kcal_calculate.this,"기초 대사량: "+kcal,Toast.LENGTH_SHORT);
        Display dis=((WindowManager)getSystemService(WINDOW_SERVICE)).getDefaultDisplay();

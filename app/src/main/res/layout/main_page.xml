@@ -61,9 +61,24 @@
                     android:gravity="center"
                     layout="@layout/joining">
                 </include>
+                <FrameLayout
+                    android:id="@+id/prof"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible">
+                    <include
 
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        layout="@layout/profile">
+
+                    </include>
+                </FrameLayout>
 
             </FrameLayout>
+
+
         </LinearLayout>
     </TabHost>
 

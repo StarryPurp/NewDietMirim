@@ -35,6 +35,7 @@ public class profile extends ActivityGroup{
     private FirebaseDatabase mDatabase;
     DatabaseReference myRef;
     List<Object> Array = new ArrayList<Object>();
+    String name_s,heis,weig;
     //이름, 키, 몸무게, 이메일,수정버튼
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -48,11 +49,12 @@ public class profile extends ActivityGroup{
         weight=(TextView)findViewById(R.id.weight_text);
 
 // Read from the database
-        /*myRef.addValueEventListener(new ValueEventListener() {
+        myRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 // This method is called once with the initial value and again
                 // whenever data at this location is updated.
+                //name_s=myRef.child(key).orderByChild("name");
                 String value = dataSnapshot.getValue(String.class);
                 Log.d(TAG, "Value is: " + value);
             }
@@ -62,7 +64,7 @@ public class profile extends ActivityGroup{
                 // Failed to read value
                 Log.w(TAG, "Failed to read value.", error.toException());
             }
-        });*/
+        });
 
         name.getText();
         height.getText();
